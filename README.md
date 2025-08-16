@@ -130,6 +130,39 @@ jpviet/
 2. Cập nhật `data/grammar.json` với trường `jlpt_level`
 3. Thêm audio files vào thư mục `audio/`
 
+### 🎵 Tạo Audio Files
+JPVIET cung cấp nhiều cách để tạo file audio MP3 cho từ vựng:
+
+#### 🌐 Web Interface
+- Mở `create-audio.html` trong trình duyệt
+- Sử dụng Web Speech API để tạo audio
+- Hỗ trợ tạo audio đơn lẻ hoặc hàng loạt
+- Tùy chỉnh giọng đọc, tốc độ, cao độ
+
+#### 🐍 Python Script
+```bash
+# Cài đặt dependencies
+pip install -r requirements.txt
+
+# Chạy script
+python create_audio.py
+```
+
+#### 🐚 Bash Script
+```bash
+# Cấp quyền thực thi
+chmod +x create_audio.sh
+
+# Chạy script
+./create_audio.sh
+```
+
+#### 📱 Phương pháp tạo audio:
+- **Google TTS**: Sử dụng Google Translate TTS API
+- **macOS say**: Sử dụng Text-to-Speech của macOS
+- **espeak**: Sử dụng espeak trên Linux
+- **Offline**: Tạo audio không cần internet
+
 ## 📄 License
 
 MIT License - Xem file [LICENSE](LICENSE) để biết thêm chi tiết.

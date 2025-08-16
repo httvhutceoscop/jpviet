@@ -10,6 +10,7 @@ const urlsToCache = [
   '/offline.html',
   '/demo-sidebar.html',
   '/demo-effects.html',
+  '/create-audio.html',
   '/style.css',
   '/app.js',
   '/flashcard.js',
@@ -19,7 +20,22 @@ const urlsToCache = [
   '/data/vocab.json',
   '/data/grammar.json',
   '/audio/hi.mp3',
-  '/audio/mizu.mp3'
+  '/audio/mizu.mp3',
+  '/audio/ひ.mp3',
+  '/audio/ありがとう.mp3',
+  '/audio/ひと.mp3',
+  '/audio/おお.mp3',
+  '/audio/ちい.mp3',
+  '/audio/あたら.mp3',
+  '/audio/ふる.mp3',
+  '/audio/たか.mp3',
+  '/audio/やす.mp3',
+  '/audio/うつく.mp3',
+  '/audio/しず.mp3',
+  '/audio/さんせい.mp3',
+  '/audio/反対.mp3',
+  '/audio/けいざい.mp3',
+  '/audio/せいじ.mp3'
 ];
 
 // Install event - cache resources
