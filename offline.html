@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offline - JPVIET</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="description" content="JPVIET - Ứng dụng học tiếng Nhật" />
+  <meta name="theme-color" content="#f15b5b" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    .offline-container {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .offline-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    
+    .offline-title {
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    
+    .offline-message {
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    
+    .offline-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .offline-actions button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .offline-actions button:hover {
+      background: #e04a4a;
+    }
+    
+    .offline-actions button.secondary {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    
+    .offline-actions button.secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>JPVIET</h1>
+  </header>
+
+  <main class="offline-container">
+    <div class="offline-icon">📱</div>
+    <h2 class="offline-title">Không có kết nối internet</h2>
+    <p class="offline-message">
+      Bạn đang offline. Một số tính năng có thể không hoạt động đầy đủ.
+      <br><br>
+      Dữ liệu đã được cache sẽ vẫn có thể sử dụng.
+    </p>
+    
+    <div class="offline-actions">
+      <button onclick="window.location.reload()">🔄 Thử lại</button>
+      <button class="secondary" onclick="window.location.href='index.html'">🏠 Về trang chủ</button>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+      <h3>💡 Mẹo sử dụng offline:</h3>
+      <ul style="text-align: left; color: var(--muted);">
+        <li>Từ vựng và ngữ pháp đã được tải sẽ hoạt động</li>
+        <li>Flashcard và quiz có thể sử dụng với dữ liệu đã cache</li>
+        <li>Audio files cần internet để phát</li>
+        <li>Kết nối lại internet để có trải nghiệm đầy đủ</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 JPVIET.COM</p>
+  </footer>
+
+  <script src="pwa.js"></script>
+  <script src="sidebar.js"></script>
+  <script>
+    // Check if we're back online
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+    
+    // Auto-retry every 30 seconds
+    setInterval(() => {
+      if (navigator.onLine) {
+        window.location.reload();
+      }
+    }, 30000);
+  </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 [
   {
     "title": "です (Desu) – Copula",
+    "jlpt_level": "N5",
     "explain_vi": "Dùng để khẳng định, lịch sự. Chủ ngữ + は + bổ ngữ + です.",
     "examples": [
       {
@@ -17,12 +18,97 @@
   },
   {
     "title": "は (wa) – Chủ đề",
+    "jlpt_level": "N5",
     "explain_vi": "Trợ từ は đánh dấu chủ đề của câu.",
     "examples": [
       {
         "jp": "日本は美しいです。",
         "romaji": "Nihon wa utsukushii desu.",
         "vi": "Nhật Bản rất đẹp."
+      }
+    ]
+  },
+  {
+    "title": "が (ga) – Chủ ngữ",
+    "jlpt_level": "N5",
+    "explain_vi": "Trợ từ が đánh dấu chủ ngữ của câu.",
+    "examples": [
+      {
+        "jp": "雨が降っています。",
+        "romaji": "Ame ga futte imasu.",
+        "vi": "Trời đang mưa."
+      }
+    ]
+  },
+  {
+    "title": "て形 (Te-form)",
+    "jlpt_level": "N4",
+    "explain_vi": "Dạng て dùng để nối câu, yêu cầu, cho phép.",
+    "examples": [
+      {
+        "jp": "本を読んでいます。",
+        "romaji": "Hon wo yonde imasu.",
+        "vi": "Tôi đang đọc sách."
+      }
+    ]
+  },
+  {
+    "title": "可能形 (Potential form)",
+    "jlpt_level": "N4",
+    "explain_vi": "Dạng khả năng, diễn tả khả năng làm gì đó.",
+    "examples": [
+      {
+        "jp": "日本語が話せます。",
+        "romaji": "Nihongo ga hanasemasu.",
+        "vi": "Tôi có thể nói tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "title": "受身形 (Passive form)",
+    "jlpt_level": "N3",
+    "explain_vi": "Dạng bị động, diễn tả hành động bị tác động.",
+    "examples": [
+      {
+        "jp": "先生に褒められました。",
+        "romaji": "Sensei ni homeraremashita.",
+        "vi": "Tôi được thầy giáo khen."
+      }
+    ]
+  },
+  {
+    "title": "使役形 (Causative form)",
+    "jlpt_level": "N3",
+    "explain_vi": "Dạng sai khiến, diễn tả việc làm cho ai đó làm gì.",
+    "examples": [
+      {
+        "jp": "子供に本を読ませました。",
+        "romaji": "Kodomo ni hon wo yomasemashita.",
+        "vi": "Tôi bắt con đọc sách."
+      }
+    ]
+  },
+  {
+    "title": "敬語 (Keigo) - Kính ngữ",
+    "jlpt_level": "N2",
+    "explain_vi": "Ngôn ngữ lịch sự, tôn trọng dùng trong môi trường công việc.",
+    "examples": [
+      {
+        "jp": "お客様がお越しになりました。",
+        "romaji": "Okyakusama ga okoshi ni narimashita.",
+        "vi": "Khách hàng đã đến."
+      }
+    ]
+  },
+  {
+    "title": "文語 (Bungo) - Văn ngôn",
+    "jlpt_level": "N1",
+    "explain_vi": "Ngôn ngữ cổ điển, thường gặp trong văn viết trang trọng.",
+    "examples": [
+      {
+        "jp": "本日は晴天なり。",
+        "romaji": "Honjitsu wa seiten nari.",
+        "vi": "Hôm nay trời đẹp."
       }
     ]
   }

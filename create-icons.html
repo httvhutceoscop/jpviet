@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Icons cho JPVIET PWA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .icon-preview {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
+        button {
+            background: #f15b5b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #e04a4a;
+        }
+        .download-all {
+            background: #10b981;
+            margin-top: 20px;
+        }
+        .download-all:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Tạo Icons cho JPVIET PWA</h1>
+    <p>Click vào từng icon để tải xuống, hoặc dùng nút "Tải tất cả"</p>
+    
+    <div id="icon-container"></div>
+    
+    <button class="download-all" onclick="downloadAllIcons()">📥 Tải tất cả icons</button>
+    
+    <script>
+        const sizes = [16, 32, 72, 96, 128, 144, 152, 192, 384, 512];
+        const iconContainer = document.getElementById('icon-container');
+        
+        function createIcon(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#ffb3b3');
+            gradient.addColorStop(1, '#ffd3d3');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Border
+            ctx.strokeStyle = '#f15b5b';
+            ctx.lineWidth = Math.max(1, size / 32);
+            ctx.strokeRect(size * 0.1, size * 0.1, size * 0.8, size * 0.8);
+            
+            // Text "JP"
+            ctx.fillStyle = '#1f2937';
+            ctx.font = `bold ${size * 0.4}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('JP', size / 2, size / 2);
+            
+            // Small "VIET" text
+            ctx.font = `bold ${size * 0.15}px Arial`;
+            ctx.fillText('VIET', size / 2, size * 0.8);
+            
+            // Add download functionality
+            canvas.addEventListener('click', () => downloadIcon(canvas, size));
+            
+            return canvas;
+        }
+        
+        function downloadIcon(canvas, size) {
+            const link = document.createElement('a');
+            link.download = `icon-${size}x${size}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        function downloadAllIcons() {
+            const canvases = document.querySelectorAll('canvas');
+            canvases.forEach((canvas, index) => {
+                setTimeout(() => {
+                    const size = sizes[index];
+                    downloadIcon(canvas, size);
+                }, index * 100);
+            });
+        }
+        
+        // Create all icons
+        sizes.forEach(size => {
+            const iconDiv = document.createElement('div');
+            iconDiv.className = 'icon-preview';
+            
+            const canvas = createIcon(size);
+            const label = document.createElement('div');
+            label.textContent = `${size}x${size}`;
+            
+            iconDiv.appendChild(canvas);
+            iconDiv.appendChild(label);
+            iconContainer.appendChild(iconDiv);
+        });
+    </script>
+</body>
+</html>

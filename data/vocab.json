@@ -4,6 +4,7 @@
     "kana": "ひ",
     "romaji": "hi",
     "meaning": "ngày",
+    "jlpt_level": "N5",
     "audio": "hi.mp3"
   },
   {
@@ -11,6 +12,7 @@
     "kana": "みず",
     "romaji": "mizu",
     "meaning": "nước",
+    "jlpt_level": "N5",
     "audio": "mizu.mp3"
   },
   {
@@ -18,6 +20,7 @@
     "kana": "ひ",
     "romaji": "hi2",
     "meaning": "lửa",
+    "jlpt_level": "N5",
     "audio": ""
   },
   {
@@ -25,6 +28,111 @@
     "kana": "ありがとう",
     "romaji": "arigatou",
     "meaning": "cảm ơn",
+    "jlpt_level": "N5",
+    "audio": ""
+  },
+  {
+    "kanji": "人",
+    "kana": "ひと",
+    "romaji": "hito",
+    "meaning": "người",
+    "jlpt_level": "N5",
+    "audio": ""
+  },
+  {
+    "kanji": "大",
+    "kana": "おお",
+    "romaji": "oo",
+    "meaning": "lớn",
+    "jlpt_level": "N5",
+    "audio": ""
+  },
+  {
+    "kanji": "小",
+    "kana": "ちい",
+    "romaji": "chii",
+    "meaning": "nhỏ",
+    "jlpt_level": "N5",
+    "audio": ""
+  },
+  {
+    "kanji": "新",
+    "kana": "あたら",
+    "romaji": "atarashi",
+    "meaning": "mới",
+    "jlpt_level": "N4",
+    "audio": ""
+  },
+  {
+    "kanji": "古",
+    "kana": "ふる",
+    "romaji": "furu",
+    "meaning": "cũ",
+    "jlpt_level": "N4",
+    "audio": ""
+  },
+  {
+    "kanji": "高",
+    "kana": "たか",
+    "romaji": "taka",
+    "meaning": "cao, đắt",
+    "jlpt_level": "N4",
+    "audio": ""
+  },
+  {
+    "kanji": "安",
+    "kana": "やす",
+    "romaji": "yasu",
+    "meaning": "rẻ, an toàn",
+    "jlpt_level": "N4",
+    "audio": ""
+  },
+  {
+    "kanji": "美",
+    "kana": "うつく",
+    "romaji": "utsukushi",
+    "meaning": "đẹp",
+    "jlpt_level": "N3",
+    "audio": ""
+  },
+  {
+    "kanji": "静",
+    "kana": "しず",
+    "romaji": "shizuka",
+    "meaning": "yên tĩnh",
+    "jlpt_level": "N3",
+    "audio": ""
+  },
+  {
+    "kanji": "賛成",
+    "kana": "さんせい",
+    "romaji": "sansei",
+    "meaning": "đồng ý",
+    "jlpt_level": "N2",
+    "audio": ""
+  },
+  {
+    "kanji": "反対",
+    "kana": "はんたい",
+    "romaji": "hantai",
+    "meaning": "phản đối",
+    "jlpt_level": "N2",
+    "audio": ""
+  },
+  {
+    "kanji": "経済",
+    "kana": "けいざい",
+    "romaji": "keizai",
+    "meaning": "kinh tế",
+    "jlpt_level": "N1",
+    "audio": ""
+  },
+  {
+    "kanji": "政治",
+    "kana": "せいじ",
+    "romaji": "seiji",
+    "meaning": "chính trị",
+    "jlpt_level": "N1",
     "audio": ""
   }
 ]

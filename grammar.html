@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ngữ pháp - JPVIET</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="description" content="Học ngữ pháp tiếng Nhật với ví dụ song ngữ" />
+  <meta name="theme-color" content="#f15b5b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="JPVIET" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  
+  <!-- PWA Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+  <link rel="manifest" href="manifest.json" />
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,6 +29,17 @@
   </header>
 
   <main class="container">
+    <div class="toolbar">
+      <div class="jlpt-filter">
+        <div class="jlpt-options">
+          <label><input type="checkbox" value="N5" checked> N5</label>
+          <label><input type="checkbox" value="N4" checked> N4</label>
+          <label><input type="checkbox" value="N3" checked> N3</label>
+          <label><input type="checkbox" value="N2" checked> N2</label>
+          <label><input type="checkbox" value="N1" checked> N1</label>
+        </div>
+      </div>
+    </div>
     <div id="grammar-list" class="cards"></div>
   </main>
 
@@ -21,23 +48,46 @@
     const res = await fetch('data/grammar.json');
     const items = await res.json();
     const wrap = document.getElementById('grammar-list');
-    wrap.innerHTML = items.map(g => `
-      <article class="card">
-        <h3>${g.title}</h3>
-        <p class="muted">${g.explain_vi}</p>
-        <div class="examples">
-          ${g.examples.map(ex => `
-            <div class="example">
-              <div class="jp">${ex.jp}</div>
-              <div class="romaji">${ex.romaji}</div>
-              <div class="vi">${ex.vi}</div>
-            </div>
-          `).join('')}
-        </div>
-      </article>
-    `).join('');
+    
+    function renderGrammar(filteredItems) {
+      wrap.innerHTML = filteredItems.map(g => `
+        <article class="card">
+          <h3>${g.title}</h3>
+          <div class="jlpt-badge jlpt-${g.jlpt_level.toLowerCase()}">${g.jlpt_level}</div>
+          <p class="muted">${g.explain_vi}</p>
+          <div class="examples">
+            ${g.examples.map(ex => `
+              <div class="example">
+                <div class="jp">${ex.jp}</div>
+                <div class="romaji">${ex.romaji}</div>
+                <div class="vi">${ex.vi}</div>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `).join('');
+    }
+    
+    renderGrammar(items);
+    
+    // JLPT filter functionality
+    document.querySelectorAll('.jlpt-filter input').forEach(input => {
+      input.addEventListener('change', () => {
+        const selectedLevels = Array.from(document.querySelectorAll('.jlpt-filter input:checked'))
+          .map(input => input.value);
+        
+        if (selectedLevels.length > 0) {
+          const filtered = items.filter(g => selectedLevels.includes(g.jlpt_level));
+          renderGrammar(filtered);
+        } else {
+          renderGrammar(items);
+        }
+      });
+    });
   }
   document.addEventListener('DOMContentLoaded', loadGrammar);
   </script>
+  <script src="pwa.js"></script>
+  <script src="sidebar.js"></script>
 </body>
 </html>
