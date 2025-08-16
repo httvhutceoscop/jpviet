@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ngữ pháp - JPVIET</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Ngữ pháp Nhật</h1>
+    <a class="back" href="index.html">← Trang chủ</a>
+  </header>
+
+  <main class="container">
+    <div id="grammar-list" class="cards"></div>
+  </main>
+
+  <script>
+  async function loadGrammar() {
+    const res = await fetch('data/grammar.json');
+    const items = await res.json();
+    const wrap = document.getElementById('grammar-list');
+    wrap.innerHTML = items.map(g => `
+      <article class="card">
+        <h3>${g.title}</h3>
+        <p class="muted">${g.explain_vi}</p>
+        <div class="examples">
+          ${g.examples.map(ex => `
+            <div class="example">
+              <div class="jp">${ex.jp}</div>
+              <div class="romaji">${ex.romaji}</div>
+              <div class="vi">${ex.vi}</div>
+            </div>
+          `).join('')}
+        </div>
+      </article>
+    `).join('');
+  }
+  document.addEventListener('DOMContentLoaded', loadGrammar);
+  </script>
+</body>
+</html>

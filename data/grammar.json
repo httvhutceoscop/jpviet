@@ -1,0 +1,29 @@
+[
+  {
+    "title": "です (Desu) – Copula",
+    "explain_vi": "Dùng để khẳng định, lịch sự. Chủ ngữ + は + bổ ngữ + です.",
+    "examples": [
+      {
+        "jp": "私は学生です。",
+        "romaji": "Watashi wa gakusei desu.",
+        "vi": "Tôi là sinh viên."
+      },
+      {
+        "jp": "これは本です。",
+        "romaji": "Kore wa hon desu.",
+        "vi": "Đây là quyển sách."
+      }
+    ]
+  },
+  {
+    "title": "は (wa) – Chủ đề",
+    "explain_vi": "Trợ từ は đánh dấu chủ đề của câu.",
+    "examples": [
+      {
+        "jp": "日本は美しいです。",
+        "romaji": "Nihon wa utsukushii desu.",
+        "vi": "Nhật Bản rất đẹp."
+      }
+    ]
+  }
+]

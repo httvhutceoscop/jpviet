@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+:root{--fg:#1f2937;--bg:#ffffff;--muted:#6b7280;--primary:#f15b5b;--border:#e5e7eb}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg);line-height:1.6}
+.site-header{padding:24px 16px;text-align:center;background:linear-gradient(90deg,#ffb3b3, #ffd3d3);border-bottom:1px solid var(--border)}
+.site-header h1{margin:0}
+.site-header .back{display:inline-block;margin-top:8px;color:#0f172a;text-decoration:none}
+.top-nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:12px;border-bottom:1px solid var(--border)}
+.top-nav a{padding:8px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:#111827;background:#fff}
+.top-nav a:hover{border-color:#cbd5e1}
+.container{max-width:900px;margin:24px auto;padding:0 16px}
+.hero ul{margin-top:8px}
+.muted{color:var(--muted)}
+.toolbar{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.toolbar input{flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:10px}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+th{background:#fafafa}
+button{padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;cursor:pointer}
+button:hover{border-color:#cbd5e1}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{border:1px solid var(--border);border-radius:16px;padding:16px;background:#fff}
+.card h3{margin-top:0;margin-bottom:8px}
+.examples .example{padding:8px;border-top:1px dashed var(--border)}
+.example .jp{font-weight:600}
+.flashcard-panel{display:flex;flex-direction:column;align-items:center;gap:12px}
+.flashcard{width:100%;max-width:520px;min-height:160px;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:#fff;padding:16px;text-align:center}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.site-footer{padding:24px 16px;text-align:center;border-top:1px solid var(--border);margin-top:32px}

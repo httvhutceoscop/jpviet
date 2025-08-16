@@ -1,0 +1,1 @@
+Đặt file mp3 phát âm vào thư mục này và cập nhật tên file trong data/vocab.json.

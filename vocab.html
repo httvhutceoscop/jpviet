@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Từ vựng - JPVIET</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Từ vựng JLPT</h1>
+    <a class="back" href="index.html">← Trang chủ</a>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Tìm theo kanji / kana / romaji / nghĩa..." />
+      <span id="count" class="muted"></span>
+    </div>
+
+    <div class="table-wrap">
+      <table id="vocab-table">
+        <thead>
+          <tr>
+            <th>Kanji</th>
+            <th>Kana</th>
+            <th>Romaji</th>
+            <th>Nghĩa (VI)</th>
+            <th>Nghe</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => loadVocab());
+  </script>
+</body>
+</html>

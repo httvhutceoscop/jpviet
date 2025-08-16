@@ -1,0 +1,30 @@
+[
+  {
+    "kanji": "日",
+    "kana": "ひ",
+    "romaji": "hi",
+    "meaning": "ngày",
+    "audio": "hi.mp3"
+  },
+  {
+    "kanji": "水",
+    "kana": "みず",
+    "romaji": "mizu",
+    "meaning": "nước",
+    "audio": "mizu.mp3"
+  },
+  {
+    "kanji": "火",
+    "kana": "ひ",
+    "romaji": "hi2",
+    "meaning": "lửa",
+    "audio": ""
+  },
+  {
+    "kanji": "",
+    "kana": "ありがとう",
+    "romaji": "arigatou",
+    "meaning": "cảm ơn",
+    "audio": ""
+  }
+]
