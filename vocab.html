@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Từ vựng - JPVIET</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="description" content="Tra cứu từ vựng tiếng Nhật JLPT với phát âm" />
+  <meta name="theme-color" content="#f15b5b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="JPVIET" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  
+  <!-- PWA Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+  <link rel="manifest" href="manifest.json" />
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,6 +42,7 @@
             <th>Kana</th>
             <th>Romaji</th>
             <th>Nghĩa (VI)</th>
+            <th>JLPT</th>
             <th>Nghe</th>
           </tr>
         </thead>
@@ -35,6 +52,8 @@
   </main>
 
   <script src="app.js"></script>
+  <script src="pwa.js"></script>
+  <script src="sidebar.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => loadVocab());
   </script>

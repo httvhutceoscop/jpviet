@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Sidebar - JPVIET</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="description" content="Demo sidebar menu JPVIET" />
+  <meta name="theme-color" content="#f15b5b" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    .demo-content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .demo-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+    }
+    
+    .demo-title {
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    
+    .demo-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .demo-btn {
+      padding: 12px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+    
+    .demo-btn:hover {
+      background: #e04a4a;
+      transform: translateY(-2px);
+    }
+    
+    .demo-btn.secondary {
+      background: #6b7280;
+    }
+    
+    .demo-btn.secondary:hover {
+      background: #4b5563;
+    }
+    
+    .demo-info {
+      background: #f8f9fa;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+    
+    .demo-info h4 {
+      margin-top: 0;
+      color: var(--fg);
+    }
+    
+    .demo-info ul {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+    
+    .demo-info li {
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Demo Sidebar Menu</h1>
+    <p>Test các tính năng của sidebar menu JPVIET</p>
+  </header>
+
+  <main class="demo-content">
+    <div class="demo-section">
+      <h2 class="demo-title">🎯 Tính năng Sidebar</h2>
+      <div class="demo-buttons">
+        <button class="demo-btn" onclick="window.sidebarMenu.open()">📱 Mở Sidebar</button>
+        <button class="demo-btn" onclick="window.sidebarMenu.close()">❌ Đóng Sidebar</button>
+        <button class="demo-btn" onclick="window.sidebarMenu.toggle()">🔄 Toggle Sidebar</button>
+      </div>
+      
+      <div class="demo-info">
+        <h4>Hướng dẫn sử dụng:</h4>
+        <ul>
+          <li>Click nút "📱 Mở Sidebar" để mở menu</li>
+          <li>Click nút "❌ Đóng Sidebar" để đóng menu</li>
+          <li>Click nút "🔄 Toggle Sidebar" để chuyển đổi trạng thái</li>
+          <li>Trên mobile: sử dụng nút hamburger menu ở góc trái header</li>
+          <li>Nhấn ESC để đóng sidebar</li>
+          <li>Click overlay để đóng sidebar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="demo-title">📱 Responsive Design</h2>
+      <div class="demo-info">
+        <h4>Breakpoints:</h4>
+        <ul>
+          <li><strong>Mobile (≤768px):</strong> Sidebar full-width, menu toggle hiển thị</li>
+          <li><strong>Desktop (>768px):</strong> Sidebar 320px, menu toggle ẩn</li>
+          <li><strong>Animation:</strong> Smooth transitions với cubic-bezier</li>
+          <li><strong>Touch:</strong> Hỗ trợ touch gestures trên mobile</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="demo-title">🎨 Animation & Effects</h2>
+      <div class="demo-info">
+        <h4>Hiệu ứng:</h4>
+        <ul>
+          <li><strong>Slide:</strong> Sidebar trượt từ trái sang phải</li>
+          <li><strong>Fade:</strong> Overlay fade in/out</li>
+          <li><strong>Hover:</strong> Menu items có hiệu ứng hover</li>
+          <li><strong>Active:</strong> Menu item active có highlight</li>
+          <li><strong>Focus:</strong> Keyboard navigation support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="demo-title">⚙️ Tính năng nâng cao</h2>
+      <div class="demo-info">
+        <h4>Chức năng:</h4>
+        <ul>
+          <li><strong>Progress Tracking:</strong> Hiển thị tiến độ học tập</li>
+          <li><strong>PWA Install:</strong> Nút cài đặt ứng dụng</li>
+          <li><strong>Reset Progress:</strong> Xóa tiến độ học tập</li>
+          <li><strong>Active Link:</strong> Highlight trang hiện tại</li>
+          <li><strong>Keyboard:</strong> Hỗ trợ phím tắt (ESC)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="demo-title">🔧 Test Cases</h2>
+      <div class="demo-buttons">
+        <button class="demo-btn secondary" onclick="testSidebarFeatures()">🧪 Test Features</button>
+        <button class="demo-btn secondary" onclick="simulateMobile()">📱 Simulate Mobile</button>
+        <button class="demo-btn secondary" onclick="resetDemo()">🔄 Reset Demo</button>
+      </div>
+      
+      <div class="demo-info">
+        <h4>Test Results:</h4>
+        <div id="test-results">Chưa test</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 JPVIET.COM - Demo Sidebar</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="pwa.js"></script>
+  <script src="sidebar.js"></script>
+  
+  <script>
+    function testSidebarFeatures() {
+      const results = [];
+      
+      // Test sidebar instance
+      if (window.sidebarMenu) {
+        results.push('✅ Sidebar instance created');
+      } else {
+        results.push('❌ Sidebar instance failed');
+      }
+      
+      // Test DOM elements
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      const toggle = document.querySelector('.menu-toggle');
+      
+      if (sidebar) results.push('✅ Sidebar DOM created');
+      if (overlay) results.push('✅ Overlay DOM created');
+      if (toggle) results.push('✅ Toggle button created');
+      
+      // Test functionality
+      try {
+        window.sidebarMenu.open();
+        setTimeout(() => {
+          if (window.sidebarMenu.isOpen) {
+            results.push('✅ Open function works');
+          } else {
+            results.push('❌ Open function failed');
+          }
+          
+          window.sidebarMenu.close();
+          setTimeout(() => {
+            if (!window.sidebarMenu.isOpen) {
+              results.push('✅ Close function works');
+            } else {
+              results.push('❌ Close function failed');
+            }
+            
+            document.getElementById('test-results').innerHTML = results.join('<br>');
+          }, 100);
+        }, 100);
+      } catch (error) {
+        results.push('❌ Function test failed: ' + error.message);
+        document.getElementById('test-results').innerHTML = results.join('<br>');
+      }
+    }
+    
+    function simulateMobile() {
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (window.innerWidth > 768) {
+        // Simulate mobile view
+        document.body.style.width = '375px';
+        document.body.style.margin = '0 auto';
+        document.body.style.border = '2px solid #ccc';
+        alert('Đã chuyển sang chế độ mobile (375px). Refresh để reset.');
+      } else {
+        alert('Đang ở chế độ mobile rồi!');
+      }
+    }
+    
+    function resetDemo() {
+      window.location.reload();
+    }
+    
+    // Auto-test on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        if (window.sidebarMenu) {
+          document.getElementById('test-results').innerHTML = '✅ Sidebar loaded successfully';
+        } else {
+          document.getElementById('test-results').innerHTML = '❌ Sidebar failed to load';
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
